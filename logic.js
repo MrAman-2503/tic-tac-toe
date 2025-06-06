@@ -270,6 +270,8 @@ function checkResult(){
             const player2Wins = document.getElementById('player2Wins');
             const player2Losses = document.getElementById('player2Losses');
             const player2Draws = document.getElementById('player2Draws');
+            const player1DisplayName = document.getElementById('player1DisplayName');
+            const player2DisplayName = document.getElementById('player2DisplayName');
 
             if (draw) {
                 winningMessageTextElement.innerText = 'Draw!';
@@ -278,17 +280,18 @@ function checkResult(){
                 player1.classList.remove('winner');
                 player2.classList.remove('winner');
             } else {
-                winningMessageTextElement.innerText = `${oTurn ? "O's" : "X's"} Wins!`;
+                const winnerName = oTurn ? player2DisplayName.textContent : player1DisplayName.textContent;
+                winningMessageTextElement.innerText = `${winnerName} Wins!`;
                 if (oTurn) {
-                    player2Losses.textContent = parseInt(player2Losses.textContent) + 1;
-                    player1Wins.textContent = parseInt(player1Wins.textContent) + 1;
-                    player1.classList.add('winner');
-                    player2.classList.remove('winner');
-                } else {
                     player1Losses.textContent = parseInt(player1Losses.textContent) + 1;
                     player2Wins.textContent = parseInt(player2Wins.textContent) + 1;
                     player2.classList.add('winner');
                     player1.classList.remove('winner');
+                } else {
+                    player2Losses.textContent = parseInt(player2Losses.textContent) + 1;
+                    player1Wins.textContent = parseInt(player1Wins.textContent) + 1;
+                    player1.classList.add('winner');
+                    player2.classList.remove('winner');
                 }
             }
             winningMessageElement.classList.add('show');
