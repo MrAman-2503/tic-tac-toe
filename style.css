@@ -3,6 +3,11 @@
     margin:0;
     box-sizing:border-box;
 }
+.playerNameInput{
+    padding: 0;
+    margin: 0;
+    color: #004080;
+}
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
@@ -10,8 +15,9 @@ body {
     align-items: center;
     justify-content: flex-start;
     height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #97f2f8;
 }
 
 h1 {
@@ -29,10 +35,10 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
-    gap: 10px;
+    gap: 6px;
     background-color: #48a9b6;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 4%;
 }
 
 .cell {
@@ -51,7 +57,7 @@ h1 {
 }
 
 .cell.x {
-    color: #fffcfc; /* tomato red */
+    color: #e7180a; /* tomato red */
     text-shadow: 0 0 10px #e7180a;
     transition: color 0.3s ease, text-shadow 0.5s ease;
 }
@@ -68,13 +74,13 @@ h1 {
 }
 
 .board.x .cell:hover {
-    background-color: #660000;
+    background-color: #d410ee;
     box-shadow: 0 0 20px 6px #ff6347;
 }
 
 .board.o .cell:hover {
     background-color: #004080;
-    box-shadow: 0 0 20px 6px #1e90ff;
+    box-shadow: 0 0 20px 6px #adcceb;
 }
 
 .winning-message {
