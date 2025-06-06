@@ -16,18 +16,17 @@
         <button id="updateNamesButton" style="margin-left: 20px;">Update Names</button>
     </div>
      <header class="parent">
-        <div class="child" style="display: flex; align-items:normal; gap: 10px;">
-            <div style="font-size: 32px;">🐧</div>
+        
     <div id="game">
         <div id="playerStatus" class="player-status">
             <div class="player" id="player1">
-                <h2><span id="player1DisplayName">Player 1</span> (X) <span class="turn-indicator" id="player1Turn">← Your Turn</span></h2>
+                <h2><span id="player1DisplayName"> <div style="font-size: 20px;">🐧</div>Player 1</span> (X) <span class="turn-indicator" id="player2Turn">← Your Turn</span></h2>
                 <p>Wins: <span id="player1Wins">0</span></p>
                 <p>Losses: <span id="player1Losses">0</span></p>
                 <p>Draws: <span id="player1Draws">0</span></p>
             </div>
             <div class="player" id="player2">
-                <h2><span id="player2DisplayName">Player 2</span> (O) <span class="turn-indicator" id="player2Turn"></span></h2>
+                <h2><span id="player2DisplayName"> <div style="font-size: 20px">🐧</div>Player 2</span> (O) <span class="turn-indicator" id="player1Turn"></span></h2>
                 <p>Wins: <span id="player2Wins">0</span></p>
                 <p>Losses: <span id="player2Losses">0</span></p>
                 <p>Draws: <span id="player2Draws">0</span></p>
@@ -49,6 +48,8 @@
             <button id="restartButton">Restart</button>
         </div>
     </div>
+
+    <script src="logic.js" type="module"></script>"
 
     <script>
         const X_CLASS = 'x';
