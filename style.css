@@ -1,0 +1,118 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    margin: 20px 0;
+    color: #333;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    background-color: #48a9b6;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #233f5a; /* darker navy */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease, box-shadow 0.5s ease;
+    color: white;
+}
+
+.cell.x {
+    color: #fffcfc; /* tomato red */
+    text-shadow: 0 0 10px #e7180a;
+    transition: color 0.3s ease, text-shadow 0.5s ease;
+}
+
+.cell.o {
+    color: #1e90ff; /* dodger blue */
+    text-shadow: 0 0 10px #1e90ff;
+    transition: color 0.3s ease, text-shadow 0.5s ease;
+}
+
+.cell:hover {
+    background-color: #9cbfe2;
+    box-shadow: 0 0 20px 6px #003366;
+}
+
+.board.x .cell:hover {
+    background-color: #660000;
+    box-shadow: 0 0 20px 6px #ff6347;
+}
+
+.board.o .cell:hover {
+    background-color: #004080;
+    box-shadow: 0 0 20px 6px #1e90ff;
+}
+
+.winning-message {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.winning-message.show {
+    display: flex;
+}
+
+#winner {
+    margin-bottom: 10px;
+}
+
+#restartButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#restartButton:hover {
+    background-color: #1976d2;
+}
+
+.player.winner {
+    background-color: #d4edda;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
